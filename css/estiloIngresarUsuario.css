@@ -34,54 +34,52 @@ body{
 }
 
 .navegacion{
-    margin-top: 30px;
-    margin-left: 300px;
+    margin-top: 20px;
+    margin-left: 550px;
 }
 
 .navegacion a{
-    margin-right: 18px;
     color: white;
     text-decoration: none;
     font-size: 20px;
-    transition: 0.35s;
-}
-
-.navegacion a:hover{
-    color:  #abb2b9;
-    ;
 }
 
 .header__texto h2{
 font-size: 50px;
 }
 
-/*TABLA*/
-.tabla{
+.formulario{
     display: flex;
     justify-content: center;
 }
-
-.tabla table{
+.formulario form{
     background-color: white;
-    width: 700px;
-    text-align: center;
-    padding: 10px;
-    font-size: 25px;
+    color: black;
+    width: 600px;
+    height: 250px;
+    padding:15px;
     border-radius: 3%;
-    border-bottom: 3px solid black;
+    border-bottom:2px solid black;
 }
 
-.tabla table td .editar{
-    color: #2874a6;
-    font-weight: bold;
-    text-decoration: none;
-    margin-right: 3px;
-    font-family: Arial, Helvetica, sans-serif;
+.formulario form input{
+    border:none;
+    border-bottom:3px solid black;
+    width: 90%;
+    height: 25px;
+    margin-bottom: 5px;
 }
 
-.eliminar{
-    color: #a93226;
+
+.boton a{
+    background-color: black;
+    color: white;
     text-decoration: none;
-    font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding:5px 15px;
+}
+
+.boton{
+    margin-top: 10px;
 }

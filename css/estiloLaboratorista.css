@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/** Header **/
+.header {
+    background-image: url(../img/fondoLab.jpeg);
+}
+.no-webp .header {
+    background-image: url(../img/fondoLab.jpeg);
+}
+.header {
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.header__texto {
+   text-align: center;
+   color: var(--blanco);
+   margin-top: 5rem;
+}
+
+.barra{
+    display: flex;
+    background-color: black;
+}
+
+.logo{
+   margin-left: 30px;
+   color: white;
+   text-decoration: none;
+
+}
+
+.navegacion{
+    margin-top: 30px;
+    margin-left: 550px;
+}
+
+.navegacion a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+.navegacion a:hover{
+    color:  #abb2b9;
+    ;
+}
+
+.header__texto h2{
+font-size: 50px;
+}
