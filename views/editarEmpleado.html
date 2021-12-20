@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="../css/estiloIngresarUsuario.css">
-    <link type="text/css" rel="stylesheet" href="../css/normalize.css">
     <title>Document</title>
 </head>
 
@@ -29,24 +28,25 @@
             <div class="formulario">
                 <div class="contenedor-form">
                     <form>
-                        <input type="number" placeholder="Ingrese DPI">
+                        <input id="dpi" type="number" placeholder="Ingrese DPI">
                         <br /><br />
-                        <input type="text" placeholder="Ingrese Nombre">
+                        <input id="nombre" type="text" placeholder="Ingrese Nombre">
                         <br /><br />
-                        <input type="text" placeholder="Ingrese Apellido">
+                        <input id="apellido" type="text" placeholder="Ingrese Apellido">
                         <br /><br />
-                        <input type="number" placeholder="Ingrese Teléfono">
+                        <input id="telefono" type="number" placeholder="Ingrese Teléfono">
                         <br /><br />
-                        <input type="email" placeholder="Ingrese Correo">
+                        <input id="correo" type="email" placeholder="Ingrese Correo">
                         <br /><br />
                     </form>
                     <div class="boton">
-                        <a href="#">Actualizar Datos</a>
+                        <a id="boton" href="#">Actualizar Datos</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    <script src="../js/editarEmpleados.js"></script>
 </body>
 
 </html>

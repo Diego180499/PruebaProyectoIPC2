@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="../css/estiloIngresarUsuario.css">
-    <link type="text/css" rel="stylesheet" href="../css/normalize.css">
     <title>Document</title>
 </head>
 
@@ -29,20 +28,23 @@
             <div class="formulario">
                 <div class="contenedor-form">
                     <form>
-                        <input type="text" placeholder="Ingrese Nombre">
+                        <input id="id" type="text" placeholder="Ingrese ID">
                         <br /><br />
-                        <input type="text" placeholder="Ingrese Apellido">
+                        <input id="nombre" type="text" placeholder="Ingrese Nombre">
                         <br /><br />
-                        <input type="number" placeholder="Ingrese Teléfono">
+                        <input id="apellido" type="text" placeholder="Ingrese Apellido">
+                        <br /><br />
+                        <input id="telefono" type="number" placeholder="Ingrese Teléfono">
                         <br /><br />
                     </form>
                     <div class="boton">
-                        <a href="#">Actualizar Datos</a>
+                        <a id="boton" href="#">Actualizar Datos</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    <script src="../js/editarMedico.js"></script>
 </body>
 
 </html>

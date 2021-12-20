@@ -1,5 +1,0 @@
-queda pendiente:
-editar paciente
-editar empleado
-editar usuario
-ingresar medico

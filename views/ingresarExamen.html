@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="../css/estiloSecretaria.css">
-    <link type="text/css" rel="stylesheet" href="../css/normalize.css">
     <title>Document</title>
 </head>
 
@@ -28,20 +27,23 @@
             <div class="formulario">
                 <div class="contenedor-form">
                     <form>
-                        <input type="number" placeholder="Ingrese CUI Paciente">
+                        <input id="cui" type="number" placeholder="Ingrese CUI Paciente">
                         <br /><br />
-                        <input type="date" placeholder="Ingrese Fecha de Examen">
+                        <input id="fecha" type="date" placeholder="Ingrese Fecha de Examen">
                         <br /><br />
-                        <input type="text" placeholder="Codigo de Medico de Referencia">
+                        <input id="medico" type="text" placeholder="Codigo de Medico de Referencia">
+                        <br /><br />
+                        <input id="tipo" type="text" placeholder="Ingrese Tipo de Examen">
                         <br /><br />
                     </form>
                     <div class="boton">
-                        <a href="#">Ingresar Examen</a>
+                        <a id="boton" class="boton" href="#">Ingresar Examen</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    <script src="../js/ingresarExamen.js"></script>
 </body>
 
 </html>

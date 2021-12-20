@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="../css/estiloIngresarUsuario.css">
-    <link type="text/css" rel="stylesheet" href="../css/normalize.css">
     <title>Document</title>
 </head>
 <body>
@@ -26,21 +25,22 @@
             <div class="formulario">
                 <div class="contenedor-form">
                          <form>
-                        <input type="number" placeholder="Ingrese Usuario">
+                        <input id="usuario" type="text" placeholder="Ingrese Usuario">
                         <br/><br/>
-                        <input type="text" placeholder="Ingrese Contraseña">
+                        <input id="password" type="text" placeholder="Ingrese Contraseña">
                         <br/><br/>
-                        <input type="text" placeholder="Ingrese Tipo">
+                        <input id="tipo" type="text" placeholder="Ingrese Tipo de Empleado">
                         <br/><br/>
-                        <input type="number" placeholder="Ingrese DPI">
+                        <input id="dpi" type="number" placeholder="Ingrese DPI de Empleado">
                         <br/><br/>
                     </form>
                     <div class="boton">
-                        <a href="#">Ingresar Usuario</a>
+                        <a href="#" id="boton">Ingresar Usuario</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    <script src="../js/agregarUsuario.js"></script>
 </body>
 </html>
