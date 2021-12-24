@@ -19,14 +19,15 @@ app.set('views', path.join(__dirname,'views'));
 
 
 //middlewares
+/**IMPORTANTE, DESBLOQUEAR DESPUES */
 app.use(morgan('dev'));
-app.use(conexion(mysql, {
-    host:'localhost',
-    user:'administrador',
-    password:'administradorsql',
-    port: 3306,
-    database: 'laboratorio'
-},'single'));
+//app.use(conexion(mysql, {
+//    host:'localhost',
+  //  user:'administrador',
+   // password:'administradorsql',
+ //   port: 3306,
+ //   database: 'laboratorio'
+//},'single'));
 
 app.use(express.urlencoded({extended:false})); //para entender todos los datos que vengan del formulario, recibe solo texto
 
