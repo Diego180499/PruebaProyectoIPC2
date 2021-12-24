@@ -6,45 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="../css/estiloIngresarUsuario.css">
-    <title>Document</title>
+    <title>Asignar Usuario</title>
 </head>
 
 <body>
     <header class="header">
         <div class="contenedor">
             <div class="barra">
-                <a class="logo" href="./moduloAdministrador.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Módulo <span
-                            class="logo__bold">Administración</span>
+                <a class="logo" href="/moduloAdmin">
+                    <h1 class="logo__nombre no-margin centrar-texto">Módulo<span class="logo__bold">Administrador</span>
                     </h1>
                 </a>
 
                 <nav class="navegacion">
+
                 </nav>
             </div>
         </div>
         <div class="header__texto">
-            <h2 class="no-margin">Actualizar Datos de Médico</h2>
+            <h2 class="no-margin">Asignar Usuario</h2>
             <div class="formulario">
                 <div class="contenedor-form">
-                    <form>
-                        <input id="id" type="text" placeholder="Ingrese ID">
+                    <form action="/asignarUsuario" method="post">
+                        <input name="usuario" id="usuario" type="text" placeholder="Ingrese Usuario">
                         <br /><br />
-                        <input id="nombre" type="text" placeholder="Ingrese Nombre">
+                        <input name="password" id="password" type="text" placeholder="Ingrese Contraseña">
                         <br /><br />
-                        <input id="apellido" type="text" placeholder="Ingrese Apellido">
+                        <input name="tipo" id="tipo" type="text" placeholder="Ingrese Tipo de Empleado">
                         <br /><br />
-                        <input id="telefono" type="number" placeholder="Ingrese Teléfono">
+                        <input name="dpi" id="dpi" type="number" placeholder="Ingrese DPI de Empleado">
                         <br /><br />
+                        <input class="boton" type="submit" value="Asignar Usuario">
                     </form>
-                    <div class="boton">
-                        <a id="boton" href="#">Actualizar Datos</a>
-                    </div>
                 </div>
             </div>
         </div>
     </header>
-    <script src="../js/editarMedico.js"></script>
 </body>
 
 </html>
