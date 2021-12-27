@@ -27,7 +27,7 @@ body{
 }
 
 .logo{
-   margin-left: 30px;
+   margin-left: 10px;
    color: white;
    text-decoration: none;
 
@@ -35,14 +35,14 @@ body{
 
 .navegacion{
     margin-top: 30px;
-    margin-left: 300px;
+    margin-left: 100px;
 }
 
 .navegacion a{
-    margin-right: 18px;
+    margin-right: 5px;
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     transition: 0.35s;
 }
 
@@ -54,6 +54,49 @@ body{
 .header__texto h2{
 font-size: 50px;
 }
+/*FOMRULARIO*/
+
+.header__texto h2{
+    font-size: 50px;
+    }
+    
+    .formulario{
+        display: flex;
+        justify-content: center;
+        height: 400px;
+    }
+    .formulario form{
+        background-color: white;
+        color: black;
+        width: 600px;
+        height: 400px;
+        padding:15px;
+        border-radius: 3%;
+        border-bottom:2px solid black;
+    }
+
+    
+    .formulario form input{
+        border:none;
+        border-bottom:3px solid black;
+        width: 90%;
+        height: 25px;
+        margin-bottom: 5px;
+    }
+    
+    
+    .boton a{
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        padding:5px 15px;
+    }
+    
+    .boton{
+        margin-top: 10px;
+    }
 
 /*TABLA*/
 .tabla{
@@ -63,10 +106,10 @@ font-size: 50px;
 
 .tabla table{
     background-color: white;
-    width: 700px;
+    width: 850px;
     text-align: center;
-    padding: 10px;
-    font-size: 25px;
+    padding: 25px;
+    font-size: 10px;
     border-radius: 3%;
     border-bottom: 3px solid black;
 }

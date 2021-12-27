@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="../css/estiloIngresarUsuario.css">
+    <link type="text/css" rel="stylesheet" href="../css/estiloAdministrador.css">
     <title>Editar Medico</title>
 </head>
 
@@ -13,9 +13,8 @@
     <header class="header">
         <div class="contenedor">
             <div class="barra">
-                <a class="logo" href="./moduloAdministrador.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Módulo <span
-                            class="logo__bold">Administración</span>
+                <a class="logo" href="/moduloAdmin">
+                    <h1 class="logo__nombre no-margin centrar-texto">Módulo <span class="logo__bold">Administración</span>
                     </h1>
                 </a>
 
@@ -27,24 +26,23 @@
             <h2 class="no-margin">Actualizar Datos de Médico</h2>
             <div class="formulario">
                 <div class="contenedor-form">
-                    <form>
-                        <input id="id" type="text" placeholder="Ingrese ID">
+                    <form action="/editarMedico" method="post">
+                        <input name="id" id="id" type="text" placeholder="Ingrese ID" value="<%=medico.id_medico%>" readonly>
                         <br /><br />
-                        <input id="nombre" type="text" placeholder="Ingrese Nombre">
+                        <input name="nombre" id="nombre" type="text" placeholder="Ingrese Nombre" value="<%=medico.nombre%>">
                         <br /><br />
-                        <input id="apellido" type="text" placeholder="Ingrese Apellido">
+                        <input name="apellido" id="apellido" type="text" placeholder="Ingrese Apellido" value="<%=medico.apellido%>">
                         <br /><br />
-                        <input id="telefono" type="number" placeholder="Ingrese Teléfono">
+                        <input name="telefono" id="telefono" type="number" placeholder="Ingrese Teléfono" value="<%=medico.telefono%>">
                         <br /><br />
+                        <input name="correo" id="correo" type="email" placeholder="Ingrese Email" value="<%=medico.correo%>">
+                        <br /><br />
+                        <input type="submit" value="Actualizar Datos">
                     </form>
-                    <div class="boton">
-                        <a id="boton" href="#">Actualizar Datos</a>
-                    </div>
                 </div>
             </div>
         </div>
     </header>
-    <script src="../js/editarMedico.js"></script>
 </body>
 
 </html>

@@ -14,7 +14,8 @@
         <div class="contenedor">
             <div class="barra">
                 <a class="logo" href="/moduloAdmin">
-                    <h1 class="logo__nombre no-margin centrar-texto">Módulo <span class="logo__bold">Administración</span>
+                    <h1 class="logo__nombre no-margin centrar-texto">Módulo <span
+                            class="logo__bold">Administración</span>
                     </h1>
                 </a>
                 <nav class="navegacion">
@@ -33,22 +34,30 @@
                     <td>Teléfono</td>
                     <td>Accion</td>
                 </tr>
-                <tr>
-                    <td>12345678</td>
-                    <td>Médico1</td>
-                    <td>Apellido1</td>
-                    <td>3354-8995</td>
-                    <td><a class="editar" href="./editarMedico.html">Editar</a><a class="eliminar"
-                            href="#">Eliminar</a></td>
-                </tr>
-                <tr>
-                    <td>87654321</td>
-                    <td>Médico2</td>
-                    <td>Apellido2</td>
-                    <td>5847-9654</td>
-                    <td><a class="editar" href="./editarMedico.html">Editar</a><a class="eliminar"
-                            href="#">Eliminar</a></td>
-                </tr>
+                <% for(let i=0; i<medicos.length; i++){ %>
+                    <tr>
+                        <td>
+                            <%=medicos[i].id_medico%>
+                        </td>
+                        <td>
+                            <%=medicos[i].nombre%>
+                        </td>
+                        <td>
+                            <%=medicos[i].apellido%>
+                        </td>
+                        <td>
+                            <%=medicos[i].telefono%>
+                        </td>
+                        <td>
+                            <%=medicos[i].correo%>
+                        </td>
+                        <td>
+                            <nav>
+                                <a href="/formEditarMedico/<%=medicos[i].id_medico%>">Editar</a>
+                            </nav>
+                        </td>
+                    </tr>
+                    <% } %>
             </table>
         </div>
     </header>

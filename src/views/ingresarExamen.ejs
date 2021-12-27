@@ -13,11 +13,9 @@
     <header class="header">
         <div class="contenedor">
             <div class="barra">
-                <a class="logo" href="./moduloSecretaria.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Módulo <span class="logo__bold">Secretaría</span>
-                    </h1>
+                <a class="logo" href="/moduloSecretaria">
+                    <h1 class="logo__nombre no-margin centrar-texto">Módulo <span class="logo__bold">Secretaría</span></h1>
                 </a>
-
                 <nav class="navegacion">
                 </nav>
             </div>
@@ -26,24 +24,21 @@
             <h2 class="no-margin">Ingresar Examen</h2>
             <div class="formulario">
                 <div class="contenedor-form">
-                    <form>
-                        <input id="cui" type="number" placeholder="Ingrese CUI Paciente">
+                    <form action="/agregarExamen" method="post">
+                        <input name="id" id="cui" type="number" placeholder="Ingrese ID Examen">
                         <br /><br />
-                        <input id="fecha" type="date" placeholder="Ingrese Fecha de Examen">
+                        <input name="cui" id="cui" type="number" placeholder="Ingrese CUI Paciente">
                         <br /><br />
-                        <input id="medico" type="text" placeholder="Codigo de Medico de Referencia">
+                        <input name="fecha" id="fecha" type="date" placeholder="Ingrese Fecha de Examen">
                         <br /><br />
-                        <input id="tipo" type="text" placeholder="Ingrese Tipo de Examen">
+                        <input name="medico" id="medico" type="text" placeholder="Codigo de Medico de Referencia ('0' si no hay)">
                         <br /><br />
+                        <input class="boton" type="submit" value="Ingresar Examen">
                     </form>
-                    <div class="boton">
-                        <a id="boton" class="boton" href="#">Ingresar Examen</a>
-                    </div>
                 </div>
             </div>
         </div>
     </header>
-    <script src="../js/ingresarExamen.js"></script>
 </body>
 
 </html>

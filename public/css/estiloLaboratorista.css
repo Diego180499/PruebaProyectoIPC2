@@ -53,3 +53,48 @@ body{
 .header__texto h2{
 font-size: 50px;
 }
+
+
+/*ESTILO FORMULARIOS*/
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    height: 550px;
+}
+.formulario form{
+    background-color: white;
+    color: black;
+    width: 600px;
+    height: 500px;
+    padding:15px;
+    border-radius: 3%;
+    border-bottom:2px solid black;
+}
+
+.formulario form input{
+    border:none;
+    border-bottom:3px solid black;
+    width: 90%;
+    height: 25px;
+    margin-bottom: 5px;
+}
+
+
+.boton a{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding:5px 15px;
+}
+
+.boton{
+    margin-top: 10px;
+}
+
+/*ESTILO A LA TABLA DE OPCIONES*/
+.tabla-opciones table{
+    width: 90%;
+}

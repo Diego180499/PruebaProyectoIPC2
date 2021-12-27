@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="../css/estiloIngresarUsuario.css">
-    <title>Ingresar Medico</title>
+    <link type="text/css" rel="stylesheet" href="../css/estiloAdministrador.css">
+    <title>Document</title>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <div class="contenedor">
             <div class="barra">
                 <a class="logo" href="/moduloAdmin">
-                    <h1 class="logo__nombre no-margin centrar-texto">Módulo <span class="logo__bold">Administración</span>
+                    <h1 class="logo__nombre no-margin centrar-texto">Módulo <span class="logo__bold">Administrador</span>
                     </h1>
                 </a>
 
@@ -23,25 +23,26 @@
             </div>
         </div>
         <div class="header__texto">
-            <h2 class="no-margin">Ingresar Médico</h2>
+            <h2 class="no-margin">Ingresar Campo</h2>
             <div class="formulario">
                 <div class="contenedor-form">
-                    <form action="/agregarMedico" method="post">
-                        <input name="id" id="id" type="number" placeholder="Ingrese ID">
-                        <br /><br />
+                    <form action="/agregarCampo" method="post">
                         <input name="nombre" id="nombre" type="text" placeholder="Ingrese Nombre">
                         <br /><br />
-                        <input name="apellido" id="apellido" type="text" placeholder="Ingrese Apellido">
+                        <label for="tipo_examen">Tipo Examen</label>
                         <br /><br />
-                        <input name="telefono" id="telefono" type="number" placeholder="Ingrese Teléfono">
+                        <select name="tipo_examen">
+                            <% for(let i=0; i<tipo.length; i++){ %>
+                                <option value="<%=tipo[i].id_tipo_examen%>"><%=tipo[i].nombre%></option>
+                            <% } %>
+                        </select>
                         <br /><br />
-                        <input name="correo" id="correo" type="text" placeholder="Ingrese Correo">
-                        <br /><br />
-                        <input class="boton" type="submit" value="Ingresar Médico">
+                        <input class="boton" type="submit" value="Ingresar">
                     </form>
                 </div>
             </div>
         </div>
     </header>
 </body>
+
 </html>
