@@ -15,4 +15,8 @@ ruta.get('/formPago',controlador.accesarPago);
 ruta.post('/agregarPago',controlador.ingresarPago);
 ruta.get('/formConsultaDetalleExamen',controlador.accesarConsultaDetalleExamen);
 ruta.post('/consultarExamen',controlador.consultarExamen);
+ruta.get('/formConsultaPaciente',controlador.accesarConsultaPaciente);
+ruta.post('/consultarPaciente',controlador.consultarPaciente);
+ruta.get('/formEditarPaciente/:cui',controlador.accesarEditarPaciente);
+ruta.post('/editarPaciente',controlador.editarPaciente);
 module.exports = ruta;

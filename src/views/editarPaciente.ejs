@@ -19,7 +19,7 @@
                 </a>
 
                 <nav class="navegacion">
-                  
+
                 </nav>
             </div>
         </div>
@@ -27,26 +27,29 @@
             <h2 class="no-margin">Actualizar Datos de Paciente</h2>
             <div class="formulario">
                 <div class="contenedor-form">
-                    <form>
-                        <input id="cui" type="number" placeholder="Ingrese CUI">
+                    <form action="/editarPaciente" method="post">
+                        <input name="cui" id="cui" type="number" value="<%=paciente.cui%>" readonly>
                         <br /><br />
-                        <input id="nombre" type="text" placeholder="Ingrese Nombre">
+                        <input name="nombre" id="nombre" type="text" placeholder="Ingrese Nombre"
+                            value="<%=paciente.nombre%>">
                         <br /><br />
-                        <input id="apellido" type="text" placeholder="Ingrese Apellido">
+                        <input name="apellido" id="apellido" type="text" placeholder="Ingrese Apellido"
+                            value="<%=paciente.apellido%>">
                         <br /><br />
-                        <input id="sexo" type="text" placeholder="Ingrese Sexo">
+                        <input name="sexo" id="sexo" type="text" placeholder="Ingrese Sexo" value="<%=paciente.sexo%>">
                         <br /><br />
-                        <input id="fecha" type="date" placeholder="Ingrese Fecha de Nacimiento">
+                        <input name="fecha" id="fecha" type="date" placeholder="Ingrese Fecha de Nacimiento" value="<%=paciente.fecha_nacimiento%>">
                         <br /><br />
+                        <div class="contenedor-boton">
+                            <div class="boton">
+                                <input type="submit" value="Actualizar Datos">
+                            </div>
+                        </div>
                     </form>
-                    <div class="boton">
-                        <a id="boton" href="#">Actualizar Datos</a>
-                    </div>
                 </div>
             </div>
         </div>
     </header>
-    <script src="../js/ingresarPaciente.js"></script>
 </body>
 
 </html>

@@ -11,17 +11,17 @@ NO ES UNA ACCION PROPIA DE LA SECRETARIA PERO LO AGREGUE EN ESTE CONTROLADOR...*
 controlador.accesar = (req, res) => {
     const usuario = req.body.usuario;
     const password = req.body.password;
-    req.getConnection((err,conn)=>{
-        conn.query('SELECT * FROM usuario WHERE usuario.usuario = ? AND password_ = ?;',[usuario,password],(err,user)=>{
-            if(!(user[0] === undefined)){
-                if(user[0].tipo === 1){
+    req.getConnection((err, conn) => {
+        conn.query('SELECT * FROM usuario WHERE usuario.usuario = ? AND password_ = ?;', [usuario, password], (err, user) => {
+            if (!(user[0] === undefined)) {
+                if (user[0].tipo === 1) {
                     res.render('moduloAdministrador');
-                }else if(user[0].tipo === '2'){
+                } else if (user[0].tipo === 2) {
                     res.render('moduloSecretaria');
-                }else if(user[0].tipo === '3'){
+                } else if (user[0].tipo === 3) {
                     res.render('moduloLaboratorista');
                 }
-            }else{
+            } else {
                 res.redirect('/');
             }
         });
@@ -146,14 +146,14 @@ controlador.consultarExamen = (req, res) => {
     const idExamen = req.body.idExamen;
     req.getConnection((err, conn) => {
         conn.query('SELECT examen.id_examen, paciente.cui, paciente.nombre, paciente.apellido FROM examen INNER JOIN paciente ON examen.paciente_cui = paciente.cui WHERE id_examen = ?;', idExamen, (err, consultaPaciente) => {
-            if (!(consultaPaciente === undefined)) {
+            if (!(consultaPaciente[0] === undefined)) {
                 conn.query('SELECT tipo_examen.nombre as tipoExamen, tipo_examen.precio as precio FROM detalle_examen INNER JOIN tipo_examen ON detalle_examen.id_tipo_examen = tipo_examen.id_tipo_examen WHERE id_examen = ?;', idExamen, (err, detalles) => {
                     res.render('vistaDetalleExamen', {
                         datos: detalles,
                         datosPaciente: consultaPaciente[0]
                     });
                 });
-            }else{
+            } else {
                 res.redirect('/formConsultaDetalleExamen');
             }
 
@@ -162,7 +162,38 @@ controlador.consultarExamen = (req, res) => {
     });
 }
 
+controlador.consultarPaciente = (req, res) => {
+    const cui = req.body.cui;
+    req.getConnection((err, conn) => {
+        conn.query('SELECT * FROM paciente WHERE cui = ?', cui, (err, datos) => {
+            if (!(datos[0] === undefined)) {
+                res.render('vistaConsultaPaciente', {
+                    paciente: datos[0]
+                });
+            }else{
+                res.redirect('/formConsultaPaciente');
+            }
+        });
+    });
+}
 
+controlador.editarPaciente = (req,res)=>{
+    const cui = req.body.cui;
+    const nombre = req.body.nombre;
+    const apellido = req.body.apellido;
+    const sexo = req.body.sexo;
+    const fecha = req.body.fecha;
+
+    req.getConnection((err,conn)=>{
+        conn.query('UPDATE paciente SET cui = ?, nombre = ?, apellido =?, sexo=?, fecha_nacimiento=? WHERE cui = ?;',[cui,nombre,apellido,sexo,fecha,cui],(err,paciente)=>{
+            if(!(paciente === undefined)){
+                res.render('moduloSecretaria');
+            }else{
+                res.redirect('/formConsultaPaciente');
+            }
+        });
+    });
+}
 
 controlador.accederModulo = (req, res) => {
     res.render('moduloSecretaria');
@@ -188,4 +219,22 @@ controlador.accesarConsultaDetalleExamen = (req, res) => {
     res.render('consultarDetalleExamen');
 }
 
+controlador.accesarConsultaPaciente = (req, res) => {
+    res.render('ingresarFormConsultaPaciente');
+}
+
+controlador.accesarEditarPaciente = (req,res)=>{
+    const cui = req.params.cui;
+    req.getConnection((err, conn) => {
+        conn.query('SELECT * FROM paciente WHERE cui = ?', cui, (err, datos) => {
+            if (!(datos[0] === undefined)) {
+                res.render('editarPaciente', {
+                    paciente: datos[0]
+                });
+            }else{
+                res.redirect('/formConsultaPaciente');
+            }
+        });
+    });
+}
 module.exports = controlador;

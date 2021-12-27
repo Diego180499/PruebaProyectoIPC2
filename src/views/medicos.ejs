@@ -32,6 +32,7 @@
                     <td>Nombre</td>
                     <td>Apellido</td>
                     <td>Teléfono</td>
+                    <td>E-mail</td>
                     <td>Accion</td>
                 </tr>
                 <% for(let i=0; i<medicos.length; i++){ %>
@@ -52,8 +53,8 @@
                             <%=medicos[i].correo%>
                         </td>
                         <td>
-                            <nav>
-                                <a href="/formEditarMedico/<%=medicos[i].id_medico%>">Editar</a>
+                            <nav class="opciones">
+                                <a class="editar" href="/formEditarMedico/<%=medicos[i].id_medico%>">Editar</a>
                             </nav>
                         </td>
                     </tr>

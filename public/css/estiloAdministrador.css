@@ -84,19 +84,6 @@ font-size: 50px;
         margin-bottom: 5px;
     }
     
-    
-    .boton a{
-        background-color: black;
-        color: white;
-        text-decoration: none;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        padding:5px 15px;
-    }
-    
-    .boton{
-        margin-top: 10px;
-    }
 
 /*TABLA*/
 .tabla{
@@ -109,7 +96,7 @@ font-size: 50px;
     width: 850px;
     text-align: center;
     padding: 25px;
-    font-size: 10px;
+    font-size: 20px;
     border-radius: 3%;
     border-bottom: 3px solid black;
 }
@@ -127,4 +114,27 @@ font-size: 50px;
     text-decoration: none;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*ESTILO AL BOTON*/
+
+.contenedor-boton{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.boton{
+    width: 40%;
+    margin-top: 10px;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+}
+
+.boton input{
+    background-color: black;
+    color: white;
+    font-size: 17px;
 }

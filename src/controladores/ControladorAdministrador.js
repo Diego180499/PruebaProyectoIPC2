@@ -78,12 +78,16 @@ controlador.ingresarTipoExamen = (req, res) => {
 controlador.ingresarCampo = (req, res) => {
     const nombre = req.body.nombre;
     const tipo = req.body.tipo_examen;
-
-    req.getConnection((err, conn) => {
-        conn.query('INSERT INTO campo(nombre, id_tipo_examen) VALUES(?,?)', [nombre, tipo], (err, campo) => {
-            res.redirect('/moduloAdmin');
+    if(!(nombre === '')){
+        req.getConnection((err, conn) => {
+            conn.query('INSERT INTO campo(nombre, id_tipo_examen) VALUES(?,?)', [nombre, tipo], (err, campo) => {
+                res.redirect('/moduloAdmin');
+            });
         });
-    });
+    }else{
+        res.redirect('/formCampo');
+    }
+    
 }
 
 controlador.editarEmpleado = (req, res) => {
@@ -106,8 +110,10 @@ controlador.editarEmpleado = (req, res) => {
 controlador.eliminarEmpleado = (req, res) => {
     const dpi = req.params.dpi;
     req.getConnection((err, conn) => {
-        conn.query('DELETE FROM empleado WHERE dpi = ?', dpi, (err, empleado) => {
-            res.redirect('/vistaEmpleados');
+        conn.query('DELETE FROM usuario WHERE dpi_empleado = ?', dpi, (err, user) => {
+            conn.query('DELETE FROM empleado WHERE dpi = ?', dpi, (err, empleado) => {
+                res.redirect('/vistaEmpleados');
+            });
         });
     });
 }
