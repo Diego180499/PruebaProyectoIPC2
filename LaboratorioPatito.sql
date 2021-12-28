@@ -100,7 +100,7 @@ CREATE TABLE usuario (
     );
     
 CREATE USER 'admin2021'@'localhost' IDENTIFIED BY 'adminIPC2';
-GRANT ALL PRIVILEGES ON * . * TO 'admin'@'localhost';
+GRANT ALL PRIVILEGES ON * . * TO 'admin2021'@'localhost';
 FLUSH PRIVILEGES;
     
     /*PRUEBAS CON LA BASE DE DATOS*/
