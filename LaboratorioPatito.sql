@@ -101,7 +101,8 @@ CREATE TABLE usuario (
     
     INSERT INTO empleado VALUES (12345678,'Diego','Estrada',56642488,'correo@gmail.com');
     INSERT INTO usuario VALUES ('administrador',1,'administrador2021',12345678);
-   
+    INSERT INTO medico VALUES (0,'indefinido','indefinido',0,'correo@gmail.com');
+    
    CREATE USER 'administrador2021'@'localhost' IDENTIFIED BY 'adminIPC2-*';
 GRANT ALL PRIVILEGES ON * . * TO 'administrador2021'@'localhost';
 FLUSH PRIVILEGES;
