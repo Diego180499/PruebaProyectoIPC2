@@ -99,6 +99,10 @@ CREATE TABLE usuario (
     CONSTRAINT FK_examen_pago FOREIGN KEY (id_examen) REFERENCES Examen(id_examen)
     );
     
+CREATE USER 'admin2021'@'localhost' IDENTIFIED BY 'adminIPC2';
+GRANT ALL PRIVILEGES ON * . * TO 'admin'@'localhost';
+FLUSH PRIVILEGES;
+    
     /*PRUEBAS CON LA BASE DE DATOS*/
    
     /*------------------------------------------------*/

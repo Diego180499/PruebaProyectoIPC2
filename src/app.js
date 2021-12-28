@@ -22,8 +22,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(morgan('dev'));
 app.use(conexion(mysql, {
   host: 'localhost',
-  user: 'administrador',
-  password: 'administradorsql',
+  user: 'admin2021',
+  password: 'adminIPC2',
   port: 3306,
   database: 'laboratorio_patito'
 }, 'single'));
