@@ -25,7 +25,7 @@ app.use(conexion(mysql, {
   user: 'administrador2021',
   password: 'adminIPC2-*',
   port: 3306,
-  database: 'laboratorio_patito'
+  database: 'LABORATORIO_PATITO'
 }, 'single'));
 
 app.use(express.urlencoded({ extended: false })); //para entender todos los datos que vengan del formulario, recibe solo texto

@@ -99,12 +99,11 @@ CREATE TABLE usuario (
     CONSTRAINT FK_examen_pago FOREIGN KEY (id_examen) REFERENCES Examen(id_examen)
     );
     
-CREATE USER 'administrador2021'@'localhost' IDENTIFIED BY 'adminIPC2-*';
+    INSERT INTO empleado VALUES (12345678,'Diego','Estrada',56642488,'correo@gmail.com');
+    INSERT INTO usuario VALUES ('administrador',1,'administrador2021',12345678);
+   
+   CREATE USER 'administrador2021'@'localhost' IDENTIFIED BY 'adminIPC2-*';
 GRANT ALL PRIVILEGES ON * . * TO 'administrador2021'@'localhost';
 FLUSH PRIVILEGES;
-    
-    /*PRUEBAS CON LA BASE DE DATOS*/
-   
-    /*------------------------------------------------*/
-    use laboratorio_patito;
+
     
