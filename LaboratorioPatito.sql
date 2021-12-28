@@ -100,25 +100,7 @@ CREATE TABLE usuario (
     );
     
     /*PRUEBAS CON LA BASE DE DATOS*/
-    USE laboratorio_patito;
-    SELECT * FROM detalle_examen WHERE id_examen = 1010;
-    INSERT INTO examen(id_examen,paciente_cui,id_medico,fecha,total) VALUES (132,12345678,12341234,'2021/04/04',0.0);
-    /*CONSULTAS*/
-    SELECT campo.id_campo, campo.nombre as nombreCampo, tipo_examen.nombre as nombreTipoExamen 
-    FROM detalle_examen 
-    INNER JOIN tipo_examen on detalle_examen.id_tipo_examen = tipo_examen.id_tipo_examen
-    INNER JOIN campo on campo.id_tipo_examen = tipo_examen.id_tipo_examen
-    WHERE id_examen = 9
-    ORDER BY tipo_examen.id_tipo_examen;
+   
     /*------------------------------------------------*/
-    UPDATE examen SET total = 20 WHERE id_examen = 1010;
-    SELECT * FROM examen WHERE id_examen = 1010;
-    SELECT * FROM tipo_examen;
+    use laboratorio_patito;
     
-    SELECT precio FROM tipo_examen WHERE id_tipo_examen = 1;
-    SELECT * FROM examen WHERE id_examen = 12127;
-    SELECT * FROM detalle_examen WHERE id_examen = 12127;
-    SELECT * FROM examen WHERE id_examen = 12128;
-		SELECT * FROM pago;
-    SELECT * FROM detalle_resultado WHERE id_resultado = 333;
-    SELECT * FROM detalle_resultado WHERE id_resultado = 1101;
